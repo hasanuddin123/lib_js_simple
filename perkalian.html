@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+   
+    <script>
+        //FUNCTION MAIN
+        function penjumlahan(){
+            var a,b,c;
+           
+            //INPUTAN
+           
+            a = Input("a");
+            b = Input("b");
+           
+            //PROSES
+           
+            c = prosespenjulahan(a,b);
+           
+            //OUTPUT
+            Tapilan(c);   
+           
+        }
+        function pengurangan(){
+            var a,b,c;
+           
+            //INPUTAN
+           
+            a = Input("a");
+            b = Input("b");
+           
+            //PROSES
+           
+            c = prosespengurangan(a,b);
+           
+            //OUTPUT
+            Tapilan(c);   
+           
+        }
+        function perkalian(){
+            var a,b,c;
+           
+            //INPUTAN
+           
+            a = Input("a");
+            b = Input("b");
+           
+            //PROSES
+           
+            c = prosesperkalian(a,b);
+           
+            //OUTPUT
+            Tapilan(c);   
+           
+        }
+        function pembagian(){
+            var a,b,c;
+           
+            //INPUTAN
+           
+            a = Input("a");
+            b = Input("b");
+           
+            //PROSES
+           
+            c = prosespembagian(a,b);
+           
+            //OUTPUT
+            Tapilan(c);   
+           
+        }
+       
+        //FUNTION PROSES
+       
+        function prosespenjulahan(bila,bilb){
+            var hasil;
+            hasil = bila + bilb;
+            return hasil;
+        }
+        function prosespengurangan(bila,bilb){
+            var hasil;
+            hasil = bila - bilb;
+            return hasil;
+        }
+        function prosesperkalian(bila,bilb){
+            var hasil;
+            hasil = bila * bilb;
+            return hasil;
+        }
+        function prosespembagian(bila,bilb){
+            var hasil;
+            hasil = bila / bilb;
+            return hasil;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="a" placeholder="input a">
+    <input type="text" id="b" placeholder="input b">
+    <input type="button" id="btn" value="+" onclick="penjumlahan()">
+    <input type="button" id="btn" value="-" onclick="pengurangan()">
+    <input type="button" id="btn" value="x" onclick="perkalian()">
+    <input type="button" id="btn" value=":" onclick="pembagian()">
+   
+    <label id="output"></label>
+   
+    <script>
+        //FUNCTION INPUT
+        function Input(idElement){
+            var input;
+            input = parseFloat(document.getElementById(idElement).value);
+            return input;
+        }
+       
+       
+        //FUNCTION OUTPUT
+        function Tapilan(hass){
+            document.getElementById("output").innerHTML = hass;
+        }
+    </script>
+</body>
+</html>

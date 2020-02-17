@@ -1,0 +1,68 @@
+<html>
+    <head>
+    <style>
+        body {
+        margin: 0;
+        padding: 0;
+    }        }
+    * {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.page {
+    width: 21cm;
+    min-height: 29.7cm;
+    padding: 0cm;
+    margin: auto;
+    background: white;
+    }
+
+.box {
+        display:block;
+        box-sizing: border-box;
+        width:95mm;
+        height:48mm;
+        float:left;
+        text-align: left;
+        vertical-align: top;
+        border: 1px solid red;
+        Padding:5mm;
+    }
+
+.boxtwo {
+        display:block;
+        box-sizing: border-box;
+        width:145mm;
+        height:88mm;
+        float:left;
+        text-align: left;
+        vertical-align: top;
+        border: 1px solid blue;
+        Padding:5mm;
+    }
+@page {
+    size: A4;
+    margin: 4mm 0 4mm 0 ;
+}
+@media print {
+    .page {
+        margin: 0;
+        border: initial;
+        border-radius: initial;
+        width: initial;
+        min-height: initial;
+        box-shadow: initial;
+        background: initial;
+        page-break-after: always;
+    }
+
+}       
+</style>
+</head>
+<body>
+<div class="page">
+        <div class="box"><h2>Mr. TEST</h2><p>how are you</p></div>
+        <div class="boxtwo"><h2>Mr. TEST</h2><p>how are you</p></div>      
+</div> 
+</body>
+</html>
