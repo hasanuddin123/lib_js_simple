@@ -1,0 +1,50 @@
+<html>
+<script>
+function enableDisableAll() {
+    cb1 = document.getElementById('checkboxOne').checked;
+    cb2 = document.getElementById('checkboxTwo').checked;
+    document.getElementById('emailAddr').disabled = !(cb1 || cb2);
+    document.getElementById('emailConfirm').disabled = !(cb1 || cb2);
+    document.getElementById('fullName').disabled = !cb1;
+    document.getElementById('color').disabled = !cb2;
+    document.getElementById('size').disabled = !cb2;
+    document.getElementById('model').disabled = !cb2;
+}
+
+</script>
+<form id="myForm">
+    <h3>Section 1</h3>
+    Checkbox 1: <input type="checkbox" name="checkbox1" id="checkboxOne" onclick="enableDisableAll();" />
+    <p><input type="text" id="emailAddr" name="myEmailAddr" placeholder="Email" disabled /></p>
+    <p><input type="text" id="emailConfirm" name="myEmailConfirm" placeholder="Confirm Email" disabled /></p>
+    <p><input type="text" id="fullName" name="myFullName" placeholder="Full Name" disabled /></p>
+    
+    <h3>Section 2</h3>
+    Checkbox 2: <input type="checkbox" name="checkbox2" id="checkboxTwo" onclick="enableDisableAll();" />
+    <p><input type="text" id="color" name="myColor" placeholder="Color" disabled /></p>
+    <p><input type="text" id="size" name="mySize" placeholder="Size" disabled /></p>
+    <p><input type="text" id="model" name="myModel" placeholder="Model" disabled /></p>
+</form>
+
+
+<script>
+$('#yourCheckboxId').click(function() {
+            if ($('#yourCheckboxId').is(':checked')){
+                 $('#inputId').val('yes');
+            }    
+            if (!$('#yourCheckboxId').is(':checked')){
+                 $('#inputId').val('no');
+            }     
+});
+
+$('#check').change(function(){
+    var checkChange = this.checked ? 'checked' : 'unchecked';
+    $('#txt').val(checkChange);
+});
+</script>
+<input type="text" value = "yes" id ="inputId">
+<input type="checkbox" id = "yourCheckboxId">
+
+<input id="check" type="checkbox" />
+<input id="txt" type="text" value="unchecked" />
+</html>
