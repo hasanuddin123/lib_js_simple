@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+        <script type="text/javascript">
+        function myFunction() {
+            var x = document.getElementById("mySelect").value;
+            document.getElementById("demo").innerHTML = "You selected: " + x;
+        }
+        </script>
+
+        <select id="mySelect" onchange="myFunction()">
+          <option value="Audi">Audi
+          <option value="BMW">BMW
+          <option value="Mercedes">Mercedes
+          <option value="Volvo">Volvo
+        </select>
+
+        <p id="demo">teee</p>
+
+</body>
+</html>
+
+
